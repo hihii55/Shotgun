@@ -1,0 +1,17 @@
+name: Shotgun
+version: 0.8
+main: me.butkicker12.Shotgun.Shotgun
+commands:
+  s:
+   description: All of the mt commands.
+   usage: /s
+permissions:
+  s.airstrike:
+   description: permission to use /s help
+  s.shotgun:
+   description: permission to use the shotgun
+  s.airstrike:
+   description: permission to use the shotgun
+  s.nuke:
+   description: permission to use the shotgun
+  

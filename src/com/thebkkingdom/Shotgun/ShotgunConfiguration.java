@@ -36,8 +36,19 @@ public class ShotgunConfiguration {
 			Shotgun.getInstance().saveConfig();
 		}
 		
-		if(Shotgun.getInstance().getConfig().get("") == null){
-			
+		if(Shotgun.getInstance().getConfig().get("weapons.nuke.use") == null){
+			Shotgun.getInstance().getConfig().set("weapons.nuke.use", true);
+			Shotgun.getInstance().saveConfig();
+		}
+		
+		if(Shotgun.getInstance().getConfig().get("weapons.airstrike.use") == null){
+			Shotgun.getInstance().getConfig().set("weapons.airstrike.use", true);
+			Shotgun.getInstance().saveConfig();
+		}
+		
+		if(Shotgun.getInstance().getConfig().get("log") == null){
+			Shotgun.getInstance().getConfig().set("log", false);
+			Shotgun.getInstance().saveConfig();
 		}
 	}
 }

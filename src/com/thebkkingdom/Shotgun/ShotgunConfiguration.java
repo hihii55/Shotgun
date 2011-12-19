@@ -1,6 +1,8 @@
 package com.thebkkingdom.Shotgun;
 
 public class ShotgunConfiguration {
+	
+	private static ShotgunConfiguration config;
 
 	public static void setup() {
 		Shotgun.getInstance()
@@ -50,5 +52,9 @@ public class ShotgunConfiguration {
 			Shotgun.getInstance().getConfig().set("log", false);
 			Shotgun.getInstance().saveConfig();
 		}
+	}
+	
+	public static ShotgunConfiguration getInstance(){
+		return config;
 	}
 }

@@ -1,9 +1,15 @@
 package com.thebkkingdom.Shotgun;
 
 public class ShotgunConfiguration {
-	
-	private static ShotgunConfiguration config;
 
+	private static ShotgunConfiguration config;
+	public boolean shotgunWeapon = Shotgun.getInstance().getConfig().getBoolean("weapons.shotgun.use");
+	public boolean rocketLauncher = Shotgun.getInstance().getConfig().getBoolean("weapons.rocketlauncher.use");
+	public boolean rocketLauncherExplosion = Shotgun.getInstance().getConfig().getBoolean("weapons.rocketlauncher.explosion")
+	public boolean grenade = Shotgun.getInstance().getConfig().getBoolean("weapons.grenade.use");
+	public boolean nuke = Shotgun.getInstance().getConfig().getBoolean("weapons.nuke.use");
+	public boolean airstrike = Shotgun.getInstance().getConfig().getBoolean("weapons.airstrike.use");
+			
 	public static void setup() {
 		Shotgun.getInstance()
 				.getConfig()
@@ -37,24 +43,25 @@ public class ShotgunConfiguration {
 			Shotgun.getInstance().getConfig().set("weapons.grenade.use", true);
 			Shotgun.getInstance().saveConfig();
 		}
-		
-		if(Shotgun.getInstance().getConfig().get("weapons.nuke.use") == null){
+
+		if (Shotgun.getInstance().getConfig().get("weapons.nuke.use") == null) {
 			Shotgun.getInstance().getConfig().set("weapons.nuke.use", true);
 			Shotgun.getInstance().saveConfig();
 		}
-		
-		if(Shotgun.getInstance().getConfig().get("weapons.airstrike.use") == null){
-			Shotgun.getInstance().getConfig().set("weapons.airstrike.use", true);
+
+		if (Shotgun.getInstance().getConfig().get("weapons.airstrike.use") == null) {
+			Shotgun.getInstance().getConfig()
+					.set("weapons.airstrike.use", true);
 			Shotgun.getInstance().saveConfig();
 		}
-		
-		if(Shotgun.getInstance().getConfig().get("log") == null){
+
+		if (Shotgun.getInstance().getConfig().get("log") == null) {
 			Shotgun.getInstance().getConfig().set("log", false);
 			Shotgun.getInstance().saveConfig();
 		}
 	}
-	
-	public static ShotgunConfiguration getInstance(){
+
+	public static ShotgunConfiguration getInstance() {
 		return config;
 	}
 }

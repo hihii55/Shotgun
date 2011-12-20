@@ -10,8 +10,6 @@ import org.bukkit.entity.Player;
 
 public class ShotgunCommands implements CommandExecutor {
 
-	private static ShotgunCommands s;
-
 	public boolean onCommand(CommandSender sender, Command cmd,
 			String cmdLabel, String[] args) {
 
@@ -42,10 +40,6 @@ public class ShotgunCommands implements CommandExecutor {
 			}
 		}
 		return false;
-	}
-
-	public static void registerCommands() {
-		Shotgun.getInstance().getCommand("Shotgun").setExecutor(s);
 	}
 
 	public void helpMessage(CommandSender cs) {

@@ -17,12 +17,16 @@ public class Shotgun extends JavaPlugin {
 	}
 
 	public void onEnable() {
-		ShotgunCommands.registerCommands();
+		registerCommands();
 		EventsHandler.registerEvents();
 		ShotgunConfiguration.setup();
 
 		ShotgunLogger.log(Level.INFO, " Enabled version: "
 				+ getDescription().getVersion());
+	}
+	
+	private void registerCommands(){
+		getCommand("s").setExecutor(new ShotgunCommands());
 	}
 
 	public static Shotgun getInstance() {

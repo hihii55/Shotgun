@@ -14,7 +14,7 @@ public class ShotgunConfiguration {
 		Shotgun.getInstance()
 				.getConfig()
 				.options()
-				.header("# Shotgun Configuration/n"
+				.header(" Shotgun Configuration /n"
 						+ "# Version: "
 						+ Shotgun.getInstance().getDescription().getVersion()
 						+ "/n"

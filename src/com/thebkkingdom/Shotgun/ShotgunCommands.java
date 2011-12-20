@@ -50,4 +50,8 @@ public class ShotgunCommands implements CommandExecutor {
 		cs.sendMessage(ChatColor.BLUE
 				+ "/s nuke - Calls a nuclear strike at your crosshairs!");
 	}
+	
+	public static void registerCommands() {
+		Shotgun.getInstance().getCommand("s").setExecutor(new ShotgunCommands());
+	}
 }

@@ -11,6 +11,5 @@ public class ShotgunLogger {
 		log.log(level, Shotgun.getPrefix() + content);
 	}
 
-	private ShotgunLogger() {
-	}
+	private ShotgunLogger() { }
 }

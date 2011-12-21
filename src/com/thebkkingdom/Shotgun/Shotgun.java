@@ -10,6 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.thebkkingdom.Shotgun.Listeners.entityListener;
 import com.thebkkingdom.Shotgun.Listeners.playerListener;
+import com.thebkkingdom.Shotgun.commands.ShotgunCommands;
 
 public class Shotgun extends JavaPlugin {
 

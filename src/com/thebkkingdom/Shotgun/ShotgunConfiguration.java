@@ -3,13 +3,19 @@ package com.thebkkingdom.Shotgun;
 public class ShotgunConfiguration {
 
 	private static ShotgunConfiguration config;
-	public boolean shotgunWeapon = Shotgun.getInstance().getConfig().getBoolean("weapons.shotgun.use");
-	public boolean rocketLauncher = Shotgun.getInstance().getConfig().getBoolean("weapons.rocketlauncher.use");
-	public boolean rocketLauncherExplosion = Shotgun.getInstance().getConfig().getBoolean("weapons.rocketlauncher.explosion");
-	public boolean grenade = Shotgun.getInstance().getConfig().getBoolean("weapons.grenade.use");
-	public boolean nuke = Shotgun.getInstance().getConfig().getBoolean("weapons.nuke.use");
-	public boolean airstrike = Shotgun.getInstance().getConfig().getBoolean("weapons.airstrike.use");
-			
+	public boolean shotgunWeapon = Shotgun.getInstance().getConfig()
+			.getBoolean("weapons.shotgun.use");
+	public boolean rocketLauncher = Shotgun.getInstance().getConfig()
+			.getBoolean("weapons.rocketlauncher.use");
+	public boolean rocketLauncherExplosion = Shotgun.getInstance().getConfig()
+			.getBoolean("weapons.rocketlauncher.explosion");
+	public boolean grenade = Shotgun.getInstance().getConfig()
+			.getBoolean("weapons.grenade.use");
+	public boolean nuke = Shotgun.getInstance().getConfig()
+			.getBoolean("weapons.nuke.use");
+	public boolean airstrike = Shotgun.getInstance().getConfig()
+			.getBoolean("weapons.airstrike.use");
+
 	public static void setup() {
 		Shotgun.getInstance()
 				.getConfig()
